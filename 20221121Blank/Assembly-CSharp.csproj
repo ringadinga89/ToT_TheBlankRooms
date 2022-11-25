@@ -82,6 +82,7 @@
     <Compile Include="Assets\Assets\#NVJOB Slender\Example\Environment\Standard Assets\Effects\ImageEffects\Scripts\ColorCorrectionCurves.cs" />
     <Compile Include="Assets\Assets\#NVJOB Slender\Example\Environment\Standard Assets\Effects\ImageEffects\Scripts\BloomAndFlares.cs" />
     <Compile Include="Assets\Assets\#NVJOB Slender\Example\Environment\Standard Assets\Effects\ImageEffects\Scripts\PostEffectsBase.cs" />
+    <Compile Include="Assets\Scripts\SlenderFOV.cs" />
     <Compile Include="Assets\Assets\#NVJOB Slender\Example\Environment\Standard Assets\Effects\ImageEffects\Scripts\EdgeDetection.cs" />
     <Compile Include="Assets\Assets\#NVJOB Slender\Example\Environment\Standard Assets\Effects\ImageEffects\Scripts\GlobalFog.cs" />
     <Compile Include="Assets\Assets\#NVJOB Slender\Example\Environment\Standard Assets\Effects\ImageEffects\Scripts\Quads.cs" />
@@ -98,7 +99,6 @@
     <Compile Include="Assets\Assets\#NVJOB Slender\Example\Environment\Standard Assets\Effects\ImageEffects\Scripts\VignetteAndChromaticAberration.cs" />
     <Compile Include="Assets\Assets\#NVJOB Slender\Example\Environment\Standard Assets\Effects\ImageEffects\Scripts\ColorCorrectionRamp.cs" />
     <Compile Include="Assets\Assets\#NVJOB Slender\Example\Environment\Standard Assets\Effects\ImageEffects\Scripts\MotionBlur.cs" />
-    <Compile Include="Assets\Scripts\SlenderFOV.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Assets\#NVJOB Slender\Example\Environment\Standard Assets\Effects\ImageEffects\Shaders\PrepareSunShaftsBlur.shader" />
