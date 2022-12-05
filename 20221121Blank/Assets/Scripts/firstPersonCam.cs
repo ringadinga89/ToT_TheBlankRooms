@@ -39,4 +39,6 @@ public class firstPersonCam : MonoBehaviour
         // 이동량을 좌표에 반영
         transform.position += move * moveSpeed * Time.deltaTime;
     }
+
+
 }

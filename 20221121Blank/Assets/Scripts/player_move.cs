@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class player_move : MonoBehaviour
 {
+  
     public float turnSpeed = 4.0f; // 마우스 회전 속도
     public float moveSpeed = 2.0f; // 이동 속도
 
@@ -14,6 +15,7 @@ public class player_move : MonoBehaviour
     {
         MouseRotation();
         KeyboardMove();
+
     }
 
     // 마우스의 움직임에 따라 카메라를 회전 시킨다.
@@ -46,4 +48,6 @@ public class player_move : MonoBehaviour
         // 이동방향 * 속도 * 프레임단위 시간을 곱해서 카메라의 트랜스폼을 이동
         transform.Translate(dir * moveSpeed * Time.deltaTime);
     }
+
+  
 }
