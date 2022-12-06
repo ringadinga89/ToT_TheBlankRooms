@@ -138,6 +138,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4311111048836944865, guid: 3d0cf0ffccc328045a428eb2db5987b2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.6
+      objectReference: {fileID: 0}
     - target: {fileID: 4313099289364078970, guid: 3d0cf0ffccc328045a428eb2db5987b2, type: 3}
       propertyPath: m_Name
       value: Academy
