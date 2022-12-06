@@ -36,6 +36,7 @@ public class PlayerMove : MonoBehaviour
         if(running)
         {
             stamina -= runCost * Time.deltaTime;
+
         }
 
         else
@@ -64,6 +65,11 @@ public class PlayerMove : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
 
         stamina = Mathf.Clamp(stamina, 0, maxStamina);
+
+        if (stamina <= 0)
+        {
+            running = false;
+        }
     }
 
     public float GetStamina() => stamina;

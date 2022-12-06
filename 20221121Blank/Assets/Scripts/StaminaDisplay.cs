@@ -5,17 +5,18 @@ using UnityEngine.UI;
 
 public class StaminaDisplay : MonoBehaviour
 {
-    private player_move player;
+    private firstPersonCam player;
     private Image fillImage;
 
     private void Start()
     {
-        player = FindObjectOfType<player_move>();
+        player = FindObjectOfType<firstPersonCam>();
         fillImage = GetComponent<Image>();
+ 
     }
 
     private void Update()
     {
-       // fillImage.fillAmount = player.GetStamina() / player.GetMaxStamina();
+       fillImage.fillAmount = player.GetStamina() / player.GetMaxStamina();
     }
 }

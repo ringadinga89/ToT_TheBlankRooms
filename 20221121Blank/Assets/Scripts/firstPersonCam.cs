@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class firstPersonCam : MonoBehaviour
 {
+    float speed; 
     public float turnSpeed = 4.0f; // 마우스 회전 속도    
     private float xRotate = 0.0f; // 내부 사용할 X축 회전량은 별도 정의 ( 카메라 위 아래 방향 )
-    public float moveSpeed = 4.0f; // 이동 속도
+    public float normalSpeed = 4.0f; // 이동 속도
+    public float runSpeed = 8.0f; // 달리는 속도
+
+    [SerializeField] private float maxStamina, runCost; // 스태미나 총량, 달릴 때마다 소비되는 스태미나량
+    private float stamina;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        stamina = maxStamina; // 시작은 스태미나 full 상태로
     }
 
     // Update is called once per frame
@@ -37,8 +42,35 @@ public class firstPersonCam : MonoBehaviour
             transform.right * Input.GetAxis("Horizontal");
 
         // 이동량을 좌표에 반영
-        transform.position += move * moveSpeed * Time.deltaTime;
+        transform.position += move * speed * Time.deltaTime;
+
+        bool running = Input.GetButton("Fire3") && stamina > 0;
+        speed = running ? runSpeed : normalSpeed;
+
+        if (Input.GetButton("Fire3") && stamina > 0)  // 쉬프트 입력 && 스태미나 0 이상
+        {
+            speed = runSpeed;
+            stamina -= runCost * Time.deltaTime;
+            running = true;
+        }
+        else
+        {
+            speed = normalSpeed;
+            stamina += Time.deltaTime;
+            running = false;
+        }
+
+        stamina = Mathf.Clamp(stamina, 0, maxStamina);
+
+
+        if (stamina <= 0)
+        {
+            running = false;
+            speed = normalSpeed; // 스태미나가 없으면 normarSpeed로 전환
+            
+        }
     }
 
-
+    public float GetStamina() => stamina;
+    public float GetMaxStamina() => maxStamina;
 }
