@@ -95,7 +95,7 @@ public class SlenderManAI : MonoBehaviour
                 {
                     this.StopCoroutine(this.moveStop);
                     this.moveStop = null;
-                    Invoke("AiMove", 1.0f); // 1.5초 뒤 다른 곳으로 이동시킴
+                    Invoke("AiMove", 0f); // 1.5초 뒤 다른 곳으로 이동시킴
                     break;
                 }
             }
