@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.ExceptionServices;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -17,6 +18,34 @@ public class SlenderManAI : MonoBehaviour
 
     // 시야각 및 추적 반경을 제어하는 EnemyFOV 클래스를 저장할 변수
     private SlenderFOV slenderFOV;
+
+    //private Vector3 speed;
+    public GameObject target;
+
+
+    /*private void Update()
+    {
+        if(target != null)
+        {
+            Vector3 dir = target.position - transform.position;
+            transform.Translate(dir.normalized * enemyMoveSpeed * Time.deltaTime);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(col.tag == "Player")
+        {
+            target = col.gameObject.transform;
+            Debug.Log("Box Enemy : Target found");
+        }
+    }*/
+
+    /*private void OnTriggerExit(Collider col)
+    {
+        target = null;
+        Debug.Log("Box Enemy : Target lost");
+    }*/
 
     private void Awake()
     {
@@ -50,7 +79,12 @@ public class SlenderManAI : MonoBehaviour
         }
     }*/
 
-    // ***시야각에 들어오면 공격하게끔 만들어야 됨*** 
+    private void Update()
+    {   
+        Vector3 l_vector = target.transform.position - transform.position;
+        transform.rotation = Quaternion.LookRotation(l_vector).normalized;
+    }
+
     private void Run()
     {
 
