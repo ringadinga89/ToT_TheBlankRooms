@@ -19,10 +19,6 @@ public class SlenderManAI : MonoBehaviour
     // 시야각 및 추적 반경을 제어하는 EnemyFOV 클래스를 저장할 변수
     private SlenderFOV slenderFOV;
 
-    //private Vector3 speed;
-    public GameObject target;
-
-
     /*private void Update()
     {
         if(target != null)
@@ -79,11 +75,7 @@ public class SlenderManAI : MonoBehaviour
         }
     }*/
 
-    private void Update()
-    {   
-        Vector3 l_vector = target.transform.position - transform.position;
-        transform.rotation = Quaternion.LookRotation(l_vector).normalized;
-    }
+    
 
     private void Run()
     {

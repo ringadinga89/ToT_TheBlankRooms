@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class View : MonoBehaviour
 {
     [SerializeField] float m_angle = 0f;
     [SerializeField] float m_distance = 0f;
     [SerializeField] LayerMask m_layerMask = 0; // 주변에 있는 플레이어 콜라이더를 검출
+
+    public GameObject target;
 
     void Sight()
     {
@@ -28,6 +31,9 @@ public class View : MonoBehaviour
                     {
                         transform.position = Vector3.Lerp(transform.position, t_hit.transform.position, 0.02f); // Ray에 닿은 객체가 Player라면
                                                                                                                 // 둘 사이에 장애물이 없는 걸로 간주
+
+                        Vector3 l_vector = target.transform.position - transform.position;
+                        transform.rotation = Quaternion.LookRotation(l_vector).normalized;
                     }
                 }
             }
