@@ -103,4 +103,18 @@ public class SlenderManAI : MonoBehaviour
             yield return null;  
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name == "Player")
+        {
+            Destroy(collision.gameObject);
+            Debug.Log("Destroy");
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+
+    }
 }

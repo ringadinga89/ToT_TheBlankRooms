@@ -405,6 +405,7 @@
 "Assets/Scripts/SlenderManAI.cs"
 "Assets/Scripts/StaminaDisplay.cs"
 "Assets/Scripts/TypeWriterEffect.cs"
+"Assets/Scripts/View.cs"
 -langversion:9.0
 
 /deterministic
