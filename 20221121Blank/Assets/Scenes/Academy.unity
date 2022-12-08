@@ -1252,6 +1252,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6319754307419886736, guid: 8adb5b245536af14492796570463e0c5, type: 3}
+      propertyPath: turnSpeed
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8adb5b245536af14492796570463e0c5, type: 3}
 --- !u!1 &1725604696
@@ -1313,9 +1317,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: f563eb3bea146f446933c0be32a1e71a, type: 3}
+    m_Font: {fileID: 12800000, guid: 83c2104f5dab0bd47a87d06b2ed0e69c, type: 3}
     m_FontSize: 14
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 100
