@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Assets/Backrooms/Scenes/R1_Backrooms.unity
+    path: Assets/Scenes/Academy.unity
+    guid: 56ba0861c9dd53544b4a9b9aa46214a1
+  - enabled: 1
+    path: Assets/Scenes/R1_Backrooms.unity
     guid: 12e3b8fe29d4a3548b04eabde5be7ce2
   m_configObjects: {}
